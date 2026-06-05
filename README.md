@@ -1,4 +1,32 @@
-# ⚡ Energy Load Forecasting & Smart Grid Optimization System
+⚡ Energy Load Forecasting & Smart Grid Optimization System
+
+An AI-powered energy forecasting system using LSTM, XGBoost, and ARIMA models with a modern React frontend. Predict electricity demand, optimize grid performance, and track carbon emissions in real-time.
+
+🚀 Features:
+- Multi-model forecasting (LSTM, XGBoost, ARIMA, Ensemble)
+- Peak load prediction and grid optimization
+- Carbon impact estimation and tracking
+- Interactive dashboard with real-time charts
+- Dark/Light mode support
+- Gemini AI integration for smart insights
+
+🛠️ Tech Stack:
+- Backend: FastAPI, Python, Scikit-learn, XGBoost
+- Frontend: React, Tailwind CSS, Recharts
+- Database: SQLite
+- ML Models: Random Forest (CPU-optimized), XGBoost, ARIMA
+
+📊 Use Cases:
+- Utility companies for demand planning
+- Smart city energy management
+- Renewable energy integration
+- Carbon footprint reduction
+
+🔧 Installation:
+1. Clone the repository
+2. Backend: `cd backend && pip install -r requirements.txt && python run.py`
+3. Frontend: `cd frontend && npm install && npm run dev`
+4. Access: http://localhost:5173
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com)
