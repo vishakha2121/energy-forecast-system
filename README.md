@@ -1,3 +1,5 @@
+# ⚡ Energy Load Forecasting & Smart Grid Optimization System
+
 ⚡ Energy Load Forecasting & Smart Grid Optimization System
 
 An AI-powered energy forecasting system using LSTM, XGBoost, and ARIMA models with a modern React frontend. Predict electricity demand, optimize grid performance, and track carbon emissions in real-time.
