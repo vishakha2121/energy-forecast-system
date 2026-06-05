@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.backend
+    container_name: energy-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///../database/energy_db.sqlite
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - DEBUG=True
+    volumes:
+      - ../database:/app/database
+      - ../backend/data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.frontend
+    container_name: energy-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://backend:8000/api/v1
+    restart: unless-stopped
+
+  # Optional: Add PostgreSQL for production (instead of SQLite)
+  # postgres:
+  #   image: postgres:15
+  #   container_name: energy-postgres
+  #   environment:
+  #     - POSTGRES_DB=energy_db
+  #     - POSTGRES_USER=energy_user
+  #     - POSTGRES_PASSWORD=energy_pass
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   postgres_data:

@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.pkl
+*.h5
+*.sqlite
+*.sqlite3
+
+# Backend
+backend/data/raw/*.csv
+backend/data/processed/*.csv
+backend/data/models/*.pkl
+backend/data/models/*.h5
+backend/.env
+backend/.env.local
+
+# Frontend
+frontend/node_modules/
+frontend/.env
+frontend/.env.local
+frontend/build/
+frontend/dist/
+frontend/.vite/
+frontend/package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+error_log/
+
+# Database
+database/*.sqlite
+database/*.sqlite3
+
+# Docker
+docker/*.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Environment
+.env
+.env.local
+.env.*.local
